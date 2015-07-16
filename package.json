@@ -1,0 +1,26 @@
+{
+  "name": "react-state-renderer",
+  "version": "1.0.0",
+  "description": "An abstract-state-router implementation with a React renderer.",
+  "main": "render.js",
+  "scripts": {
+    "test": "node render.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jacobroufa/react-state-renderer.git"
+  },
+  "keywords": [
+    "react",
+    "state-router"
+  ],
+  "author": "Jacob M. Roufa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobroufa/react-state-renderer/issues"
+  },
+  "homepage": "https://github.com/jacobroufa/react-state-renderer",
+  "dependencies": {
+    "react": "^0.13.3"
+  }
+}
