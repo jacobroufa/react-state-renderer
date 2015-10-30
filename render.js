@@ -5,28 +5,26 @@ var React = require( 'react' );
 module.exports = function makeRenderer( router ) {
   return {
     render: function( context, callback ) {
-      // parse context.template with context.content
-        // template will be some jsx
-        // content will be the data to fill it
+      var Element = context.template;
+      var location = document.querySelector( context.element );
 
-      // apply parsed template to context.element
-
-      // return callback( null, dom )
+      return callback( null, React.render( <Element data={context.content} />, location ));
     },
     getChildElement: function( dom, callback ) {
-      // return callback( null, dom.child )
+      var child = React.findDOMNode( <ui-view /> );
+      return callback( null, child )
     },
     reset: function( context, callback ) {
-      // parse context.template with context.content
-        // template will be some jsx
-        // content will be the data to fill it
+      var Element = context.template;
+      var location = document.querySelector( context.element );
 
-      // apply parsed template to context.domApi
+      React.render( <Element data={context.content} />, location );
 
-      // return callback( null )
+      return callback( null );
     },
     destroy: function( dom, callback ) {
       // remove dom
+
     }
   }
 };
